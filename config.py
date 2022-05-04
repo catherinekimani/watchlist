@@ -4,6 +4,8 @@ class Config:
     '''
     MOVIE_API_BASE_URL = 'https://api.themoviedb.org/3/movie/{}?api_key={}'
     MOVIE_API_KEY = '28488a3d739358a72809bafba00b9bb0'
+    SECRET_KEY = 'catherinekimani'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:wambui@localhost/watchlist'
 
 class ProdConfig(Config):
     '''
@@ -11,7 +13,7 @@ class ProdConfig(Config):
     Args:
         Config: The parent configuration class with General configuration settings
     '''
-    pass
+    MOVIE_API_BASE_URL = 'https://api.themoviedb.org/3/movie/{}?api_key={}'
 
 class DevConfig(Config):
     '''
@@ -20,7 +22,7 @@ class DevConfig(Config):
         Config: The parent configuration class with General configuration settings
     '''
 
-DEBUG = True
+    DEBUG = True
 
 config_options = {
     'development' : DevConfig,
