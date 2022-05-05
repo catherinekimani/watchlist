@@ -1,8 +1,4 @@
-img{
-    width: 50%;
-    height: 20vh;
-}
+.row{
+    background-color: rgb(225, 29, 29);
+} 
 
-#movie{
-    background-color: black;
-}
